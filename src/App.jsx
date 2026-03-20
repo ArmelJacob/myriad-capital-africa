@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const LANG = {
   fr: {
-    nav: { home: "Accueil", about: "À propos", services: "Nos Métiers", team: "Équipe", contact: "Contact" },
+    nav: { home: "Accueil", about: "À propos", services: "Nos Métiers", partners: "Partenaires", team: "Équipe", contact: "Contact" },
     hero: {
       tag: "Boutique panafricaine de Corporate Finance & Advisory",
       title1: "Structure.",
@@ -32,20 +32,23 @@ const LANG = {
         {
           icon: "📊",
           name: "Conseil Stratégique",
-          desc: "Audits organisationnels et stratégiques, études sectorielles, plans directeurs, stratégie d'entreprise, business plans et modèles financiers.",
-          details: ["Audits organisationnels & stratégiques", "Études sectorielles & plans directeurs", "Stratégie d'entreprise", "Business plans & modèles financiers"],
+          sub: "Accompagner la réflexion, la transformation et la planification financière à long terme.",
+          desc: "Nous aidons nos clients à définir leur vision, structurer leurs priorités et bâtir des modèles économiques durables. Grâce à une expertise sectorielle approfondie, nous alignons stratégie, gouvernance et performance financière pour un impact mesurable.",
+          details: ["Plans stratégiques & plans de développement", "Études de faisabilité & structuration institutionnelle", "Stratégies de financement & d'investissement", "Analyse de performance économique & modélisation", "Politiques publiques & réformes sectorielles (PPP, infrastructures, énergie)"],
         },
         {
           icon: "💰",
           name: "Corporate Finance",
-          desc: "Levées de fonds, structuration de dette, arrangement financier, project finance, PPP, M&A advisory et évaluation d'entreprises.",
-          details: ["Levées de fonds & Debt Advisory", "Structuration & arrangement financier", "Project Finance & PPP", "M&A Advisory & Évaluation"],
+          sub: "Structurer, financer et exécuter des opérations à forte valeur ajoutée.",
+          desc: "Nous accompagnons entreprises, investisseurs et gouvernements dans la structuration de leurs transactions, la recherche de capitaux et la mise en place de financements complexes. Notre savoir-faire combine rigueur technique et compréhension stratégique des marchés africains.",
+          details: ["Levées de fonds & Debt Advisory", "Structuration & arrangement financier", "Project Finance & PPP", "M&A Advisory & Évaluation d'entreprises", "Émissions obligataires & titrisation"],
         },
         {
           icon: "⚙️",
           name: "Conseil Opérationnel",
-          desc: "Conduite du changement, transformation digitale, optimisation des process, accompagnement à la mise en œuvre et formation.",
-          details: ["Conduite du changement", "Transformation digitale", "Optimisation des process", "Accompagnement opérationnel & Formation"],
+          sub: "Transformer la stratégie en résultats opérationnels mesurables.",
+          desc: "Nos équipes accompagnent la mise en œuvre des projets, optimisent les structures internes et renforcent la maîtrise des risques pour une performance durable.",
+          details: ["Restructuration organisationnelle et financière", "Optimisation du contrôle interne et gestion des risques", "Systèmes de reporting et conformité", "Digitalisation des processus financiers", "Suivi post-transaction et pilotage opérationnel"],
         },
       ],
     },
@@ -59,24 +62,48 @@ const LANG = {
         { icon: "🚀", name: "PME & Start-ups", desc: "Entreprises en croissance, scale-ups, entrepreneurs" },
       ],
     },
+    partners: {
+      tag: "PARTENAIRES & ÉCOSYSTÈME FINANCIER",
+      title: "Institutions financières & Partenaires stratégiques",
+      categories: [
+        {
+          name: "MDB, DFI, ECA & Funds",
+          logos: ["IFC", "AfDB", "AFC", "BOAD", "TDB", "DBSA", "BIDC", "European Bank", "BII", "KFW FMO", "Commerzbank", "Proparco", "Invest International", "Shelter Afrique", "HSBC", "Nedbank", "MUFG", "Deutsche Bank", "Investec", "Rabobank", "Euler Hermes", "Sinosure", "EXIM", "Credendo", "UK Export Finance", "SACE", "Bpifrance", "JBIC", "Coface", "FAGACE", "African Fund", "AgDevCo", "AATIF", "Swedfund", "Norfund", "ACT Fund", "Cygnum Capital"],
+        },
+        {
+          name: "Banques Commerciales",
+          logos: ["BDU-BF", "UBA", "Orabank", "BGFIBank", "Standard Chartered", "Afriland First Bank", "GTCO", "Afrika Banque", "Bridge Bank", "Bank of Africa", "SIB", "Banque Atlantique", "Ecobank", "Standard Bank", "Coris Bank", "NSIA Banque", "Versus Bank", "Orange Bank", "Société Générale CI", "AFG Bank", "BICICI", "BNI"],
+        },
+      ],
+    },
 
     team: {
-      tag: "L'ÉQUIPE",
-      title: "Des professionnels engagés",
+      tag: "NOTRE ÉQUIPE",
+      title: "Une équipe de professionnels Expérimentés / Senior Leadership",
       members: [
         {
-          name: "Armel Assanvoh",
-          role: "Managing Partner",
-          bio: "14 ans d'expérience en corporate finance, gestion d'entreprise et conseil stratégique. Parcours : PWIS Group (DGA), Emerald Corporate Group (Fondateur & DG), MTN, Rina Consulting. Formation : MBA Finance (Coventry University, UK), Master Administration des Entreprises.",
-          highlights: ["14 ans d'expérience", "Fondateur Emerald Corporate Group", "MBA Finance — Coventry University"],
+          name: "Armel Jacob ASSANVOH",
+          role: "Managing Director",
+          bio: "+15 ans d'expérience en stratégie d'entreprise, business développement, project & structured finance, operations & Management Général.",
+          parcours: [
+            "Emerald Corporate Group London, Paris (Associate Director, Subsaharan Africa) — Sovereign Debt, Project Finance & PPP",
+            "PWIS Côte d'Ivoire (Directeur Général) — Restructuration, stratégie de développement, Management Général (165 Staffs)",
+            "SIAMP Nigeria (Sales & Marketing Manager) — 6 pays couverts en Afrique de l'Ouest",
+          ],
+          formation: "MBA Paris Panthéon Sorbonne, MBA Paris Dauphine, MBA CESAG Dakar",
           email: "armel.assanvoh@myriadcapitalafrica.com",
           phone: "+225 07 07 XX XX XX",
         },
         {
-          name: "Koffi N'Guessan Philippe",
-          role: "Directeur, Structured Finance & Capital Solutions",
-          bio: "11+ ans d'expérience en structuration financière, analyse de crédit et investment banking. Parcours : Ecobank CI (Senior Credit Analyst), EDC Investment Corp. (Investment Banking), Bridge Bank Group. Formation : MSc Finance EMLYON, Master CCA INTEC Paris.",
-          highlights: ["11+ ans d'expérience", "165+ Mds FCFA de transactions", "MSc Finance — EMLYON"],
+          name: "Philippe N'Guessan KOFFI",
+          role: "Director, Structured Finance & Capital Solutions",
+          bio: "+11 ans d'expérience en analyse financière, structuration de financements, modélisation financière et évaluation d'entreprises. Expertise réglementaire UEMOA.",
+          parcours: [
+            "Ecobank CI (Senior Credit Analyst) — 11.6 Mds XOF validés, portefeuille 33 filiales, intérim Sous-Directeur",
+            "EDC Investment Corp. (Investment Banking) — Financements structurés, Fonds d'Entretien Routier 154 Mds FCFA",
+            "Bridge Bank Group (Analyste Financier) — Innovation en analyse de risques PME",
+          ],
+          formation: "MSc Finance EMLYON, Master CCA INTEC Paris, MSTCF",
           email: "philippe.nguessan@myriadcapitalafrica.com",
           phone: "+225 07 07 XX XX XX",
         },
@@ -96,7 +123,7 @@ const LANG = {
     },
   },
   en: {
-    nav: { home: "Home", about: "About", services: "Services", team: "Team", contact: "Contact" },
+    nav: { home: "Home", about: "About", services: "Services", partners: "Partners", team: "Team", contact: "Contact" },
     hero: {
       tag: "Pan-African Boutique Corporate Finance & Advisory",
       title1: "Structure.",
@@ -126,20 +153,23 @@ const LANG = {
         {
           icon: "📊",
           name: "Strategic Advisory",
-          desc: "Organizational & strategic audits, sector studies, master plans, corporate strategy, business plans & financial models.",
-          details: ["Organizational & Strategic Audits", "Sector Studies & Master Plans", "Corporate Strategy", "Business Plans & Financial Models"],
+          sub: "Supporting long-term vision, transformation and financial planning.",
+          desc: "We help our clients define their vision, structure their priorities and build sustainable economic models. Through deep sector expertise, we align strategy, governance and financial performance for measurable impact.",
+          details: ["Strategic plans & development plans", "Feasibility studies & institutional structuring", "Financing & investment strategies", "Economic performance analysis & modeling", "Public policy & sector reforms (PPP, infrastructure, energy)"],
         },
         {
           icon: "💰",
           name: "Corporate Finance",
-          desc: "Fundraising, debt structuring, financial arrangement, project finance, PPP, M&A advisory and valuations.",
-          details: ["Fundraising & Debt Advisory", "Structuring & Financial Arrangement", "Project Finance & PPP", "M&A Advisory & Valuation"],
+          sub: "Structuring, financing and executing high-value transactions.",
+          desc: "We support companies, investors and governments in structuring their transactions, raising capital and implementing complex financing. Our expertise combines technical rigor with strategic understanding of African markets.",
+          details: ["Fundraising & Debt Advisory", "Structuring & financial arrangement", "Project Finance & PPP", "M&A Advisory & Business valuation", "Bond issuance & securitization"],
         },
         {
           icon: "⚙️",
           name: "Operational Advisory",
-          desc: "Change management, digital transformation, process optimization, implementation support and training.",
-          details: ["Change Management", "Digital Transformation", "Process Optimization", "Operational Support & Training"],
+          sub: "Turning strategy into measurable operational results.",
+          desc: "Our teams support project implementation, optimize internal structures and strengthen risk management for sustainable performance.",
+          details: ["Organizational & financial restructuring", "Internal control optimization & risk management", "Reporting systems & compliance", "Digitalization of financial processes", "Post-transaction monitoring & operational management"],
         },
       ],
     },
@@ -153,24 +183,48 @@ const LANG = {
         { icon: "🚀", name: "SMEs & Start-ups", desc: "Growing companies, scale-ups, entrepreneurs" },
       ],
     },
+    partners: {
+      tag: "PARTNERS & FINANCIAL ECOSYSTEM",
+      title: "Financial institutions & Strategic partners",
+      categories: [
+        {
+          name: "MDB, DFI, ECA & Funds",
+          logos: ["IFC", "AfDB", "AFC", "BOAD", "TDB", "DBSA", "BIDC", "European Bank", "BII", "KFW FMO", "Commerzbank", "Proparco", "Invest International", "Shelter Afrique", "HSBC", "Nedbank", "MUFG", "Deutsche Bank", "Investec", "Rabobank", "Euler Hermes", "Sinosure", "EXIM", "Credendo", "UK Export Finance", "SACE", "Bpifrance", "JBIC", "Coface", "FAGACE", "African Fund", "AgDevCo", "AATIF", "Swedfund", "Norfund", "ACT Fund", "Cygnum Capital"],
+        },
+        {
+          name: "Commercial Banks",
+          logos: ["BDU-BF", "UBA", "Orabank", "BGFIBank", "Standard Chartered", "Afriland First Bank", "GTCO", "Afrika Banque", "Bridge Bank", "Bank of Africa", "SIB", "Banque Atlantique", "Ecobank", "Standard Bank", "Coris Bank", "NSIA Banque", "Versus Bank", "Orange Bank", "Société Générale CI", "AFG Bank", "BICICI", "BNI"],
+        },
+      ],
+    },
 
     team: {
-      tag: "THE TEAM",
-      title: "Committed professionals",
+      tag: "OUR TEAM",
+      title: "Experienced Professionals / Senior Leadership",
       members: [
         {
-          name: "Armel Assanvoh",
-          role: "Managing Partner",
-          bio: "14 years of experience in corporate finance, business management and strategic advisory. Career: PWIS Group (Deputy CEO), Emerald Corporate Group (Founder & CEO), MTN, Rina Consulting. Education: MBA Finance (Coventry University, UK), Master in Business Administration.",
-          highlights: ["14 years of experience", "Founded Emerald Corporate Group", "MBA Finance — Coventry University"],
+          name: "Armel Jacob ASSANVOH",
+          role: "Managing Director",
+          bio: "+15 years of experience in corporate strategy, business development, project & structured finance, operations & General Management.",
+          parcours: [
+            "Emerald Corporate Group London, Paris (Associate Director, Subsaharan Africa) — Sovereign Debt, Project Finance & PPP",
+            "PWIS Côte d'Ivoire (CEO) — Restructuring, development strategy, General Management (165 Staff)",
+            "SIAMP Nigeria (Sales & Marketing Manager) — 6 countries covered in West Africa",
+          ],
+          formation: "MBA Paris Panthéon Sorbonne, MBA Paris Dauphine, MBA CESAG Dakar",
           email: "armel.assanvoh@myriadcapitalafrica.com",
           phone: "+225 07 07 XX XX XX",
         },
         {
-          name: "Koffi N'Guessan Philippe",
+          name: "Philippe N'Guessan KOFFI",
           role: "Director, Structured Finance & Capital Solutions",
-          bio: "11+ years of experience in financial structuring, credit analysis and investment banking. Career: Ecobank CI (Senior Credit Analyst), EDC Investment Corp. (Investment Banking), Bridge Bank Group. Education: MSc Finance EMLYON, Master CCA INTEC Paris.",
-          highlights: ["11+ years of experience", "165+ Bn FCFA in transactions", "MSc Finance — EMLYON"],
+          bio: "+11 years of experience in financial analysis, financing structuring, financial modeling and business valuation. WAEMU regulatory expertise.",
+          parcours: [
+            "Ecobank CI (Senior Credit Analyst) — XOF 11.6 Bn validated, 33-subsidiary portfolio, interim Deputy Director",
+            "EDC Investment Corp. (Investment Banking) — Structured financing, Road Maintenance Fund FCFA 154 Bn",
+            "Bridge Bank Group (Financial Analyst) — Innovation in SME risk analysis",
+          ],
+          formation: "MSc Finance EMLYON, Master CCA INTEC Paris, MSTCF",
           email: "philippe.nguessan@myriadcapitalafrica.com",
           phone: "+225 07 07 XX XX XX",
         },
@@ -212,7 +266,7 @@ export default function MyriadSite() {
   useEffect(() => {
     const onScroll = () => {
       setScrollY(window.scrollY);
-      const sections = ["home", "about", "services", "team", "contact"];
+      const sections = ["home", "about", "services", "partners", "team", "contact"];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el && el.getBoundingClientRect().top <= 120) {
@@ -421,11 +475,11 @@ export default function MyriadSite() {
         transition: "all 0.4s", padding: navBg ? "14px 0" : "22px 0",
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ cursor: "pointer" }} onClick={() => scrollTo("home")}>
-            <img src={LOGO_SRC} alt="Myriad Capital Africa" style={{ height: 40, filter: "brightness(0) invert(1)" }} />
+          <div style={{ cursor: "pointer", background: "rgba(255,255,255,0.95)", padding: "4px 12px", borderRadius: 4 }} onClick={() => scrollTo("home")}>
+            <img src={LOGO_SRC} alt="Myriad Capital Africa" style={{ height: 36, display: "block" }} />
           </div>
           <div className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            {["home", "about", "services", "team", "contact"].map(s => (
+            {["home", "about", "services", "partners", "team", "contact"].map(s => (
               <span key={s} className={`nav-link ${activeSection === s ? "active" : ""}`} onClick={() => scrollTo(s)}>
                 {t.nav[s] || s}
               </span>
@@ -462,7 +516,7 @@ export default function MyriadSite() {
       {menuOpen && (
         <div className="mobile-menu">
           <button onClick={() => setMenuOpen(false)} style={{ position: "absolute", top: 20, right: 24, background: "none", border: "none", color: "#fff", fontSize: 28, cursor: "pointer" }}>✕</button>
-          {["home", "about", "services", "team", "contact"].map(s => (
+          {["home", "about", "services", "partners", "team", "contact"].map(s => (
             <span key={s} className="nav-link" onClick={() => scrollTo(s)}>{t.nav[s] || s}</span>
           ))}
           <button onClick={() => { setLang(lang === "fr" ? "en" : "fr"); setMenuOpen(false); }}
@@ -547,16 +601,22 @@ export default function MyriadSite() {
             {t.services.items.map((svc, i) => (
               <div key={i} className="service-card" onClick={() => setExpandedService(expandedService === i ? null : i)}>
                 <div style={{ fontSize: 36, marginBottom: 20 }}>{svc.icon}</div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 600, color: "var(--navy)", marginBottom: 16 }}>{svc.name}</h3>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 600, color: "var(--navy)", marginBottom: 8 }}>{svc.name}</h3>
+                {svc.sub && <p style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "var(--gold)", fontStyle: "italic", marginBottom: 16, letterSpacing: 0.3 }}>{svc.sub}</p>}
                 <p style={{ fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.7, color: "var(--gray)", marginBottom: expandedService === i ? 20 : 0 }}>{svc.desc}</p>
                 {expandedService === i && (
-                  <ul style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--navy)", listStyle: "none", padding: 0 }}>
-                    {svc.details.map((d, j) => (
-                      <li key={j} style={{ padding: "8px 0", borderTop: "1px solid rgba(121,92,32,0.1)", display: "flex", alignItems: "center", gap: 10 }}>
-                        <span style={{ color: "var(--gold)", fontSize: 14 }}>→</span> {d}
-                      </li>
-                    ))}
-                  </ul>
+                  <div style={{ marginTop: 8, padding: "16px 0 0", borderTop: "1px solid rgba(121,92,32,0.15)" }}>
+                    <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 600, letterSpacing: 1.5, color: "var(--gold)", textTransform: "uppercase", display: "block", marginBottom: 12 }}>
+                      {lang === "fr" ? "Activités clés" : "Key activities"}
+                    </span>
+                    <ul style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--navy)", listStyle: "none", padding: 0 }}>
+                      {svc.details.map((d, j) => (
+                        <li key={j} style={{ padding: "8px 0", borderTop: "1px solid rgba(121,92,32,0.06)", display: "flex", alignItems: "center", gap: 10 }}>
+                          <span style={{ color: "var(--gold)", fontSize: 14 }}>→</span> {d}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
               </div>
             ))}
@@ -584,6 +644,37 @@ export default function MyriadSite() {
         </div>
       </section>
 
+      {/* ═══════ PARTENAIRES ═══════ */}
+      <section id="partners" style={{ padding: "120px 32px", background: "var(--navy)" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <span className="tag">{t.partners.tag}</span>
+          <h2 className="section-title" style={{ color: "#fff" }}>{t.partners.title}</h2>
+          <div className="gold-line" />
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, marginTop: 48 }}>
+            {t.partners.categories.map((cat, i) => (
+              <div key={i} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(121,92,32,0.2)", padding: "32px 28px" }}>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 600, color: "var(--gold)", marginBottom: 24 }}>{cat.name}</h3>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                  {cat.logos.map((logo, j) => (
+                    <span key={j} style={{
+                      fontFamily: "var(--font-body)", fontSize: 10, fontWeight: 500,
+                      padding: "5px 12px",
+                      background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.75)",
+                      border: "1px solid rgba(121,92,32,0.15)",
+                      letterSpacing: 0.3,
+                      transition: "all 0.2s",
+                    }}
+                      onMouseEnter={e => { e.target.style.background = "var(--gold)"; e.target.style.color = "#fff"; e.target.style.borderColor = "var(--gold)"; }}
+                      onMouseLeave={e => { e.target.style.background = "rgba(255,255,255,0.07)"; e.target.style.color = "rgba(255,255,255,0.75)"; e.target.style.borderColor = "rgba(121,92,32,0.15)"; }}
+                    >{logo}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ TEAM ═══════ */}
       <section id="team" style={{ padding: "120px 32px", background: "var(--white)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -595,7 +686,7 @@ export default function MyriadSite() {
               <div key={i} style={{ display: "flex", flexDirection: "column", gap: 0 }}>
                 {/* Avatar placeholder */}
                 <div style={{
-                  width: "100%", height: 320, background: "var(--navy)",
+                  width: "100%", height: 200, background: "var(--navy)",
                   display: "flex", alignItems: "center", justifyContent: "center",
                   position: "relative", overflow: "hidden",
                 }}>
@@ -606,22 +697,30 @@ export default function MyriadSite() {
                     ))}
                   </div>
                   <div style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
-                    <div style={{ fontFamily: "var(--font-display)", fontSize: 64, fontWeight: 300, color: "var(--gold)", lineHeight: 1 }}>
-                      {m.name.split(" ").map(n => n[0]).join("")}
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 56, fontWeight: 300, color: "var(--gold)", lineHeight: 1 }}>
+                      {m.name.split(" ").filter(n => n.length > 1).map(n => n[0]).join("")}
                     </div>
                   </div>
                 </div>
-                <div style={{ padding: "32px 0" }}>
+                <div style={{ padding: "28px 0" }}>
                   <h3 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 600, color: "var(--navy)", marginBottom: 4 }}>{m.name}</h3>
                   <span style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, letterSpacing: 2, color: "var(--gold)", textTransform: "uppercase", display: "block", marginBottom: 20 }}>{m.role}</span>
                   <p style={{ fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.7, color: "var(--gray)", marginBottom: 20 }}>{m.bio}</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {m.highlights.map((h, j) => (
-                      <span key={j} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy)", display: "flex", alignItems: "center", gap: 8 }}>
-                        <span style={{ color: "var(--gold)" }}>◆</span> {h}
+
+                  <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 600, letterSpacing: 1.5, color: "var(--navy)", textTransform: "uppercase", display: "block", marginBottom: 12 }}>
+                    {lang === "fr" ? "Parcours :" : "Career :"}
+                  </span>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }}>
+                    {m.parcours.map((p, j) => (
+                      <span key={j} style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--gray)", display: "flex", alignItems: "flex-start", gap: 8, lineHeight: 1.5 }}>
+                        <span style={{ color: "var(--gold)", marginTop: 2, flexShrink: 0 }}>→</span> {p}
                       </span>
                     ))}
                   </div>
+
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--gold)", fontStyle: "italic" }}>
+                    {lang === "fr" ? "Formation" : "Education"} : {m.formation}
+                  </p>
                 </div>
               </div>
             ))}
@@ -678,7 +777,9 @@ export default function MyriadSite() {
       <footer style={{ padding: "40px 32px", background: "#0B1520", borderTop: "1px solid rgba(121,92,32,0.15)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-            <img src={LOGO_SRC} alt="Myriad Capital Africa" style={{ height: 32, filter: "brightness(0) invert(1)" }} />
+            <div style={{ background: "rgba(255,255,255,0.95)", padding: "3px 10px", borderRadius: 4 }}>
+              <img src={LOGO_SRC} alt="Myriad Capital Africa" style={{ height: 28, display: "block" }} />
+            </div>
             <span style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "var(--gold)", letterSpacing: 2, fontStyle: "italic" }}>{t.footer.tagline}</span>
           </div>
           <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.35)" }}>{t.footer.copy}</span>
